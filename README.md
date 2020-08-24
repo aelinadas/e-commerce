@@ -65,13 +65,13 @@
 
 ## Application Deployment
 
-- Ensure that you have installed Java (Java 8 or above) on your machine
+- Install Java (Java 8 or above) on your machine
 - Clone or download this repository on to your machine
 - Install NetBeans IDE, if not present
 - Import the cloned or downloaded project
 - Download and install Apache Tomcat 8 or above
 - Integrate Tomcat with Netbeans and run the application
-                    OR
-  build and generate a WAR file of the application and deploy it in the tomcat server by placing the previously generated WAR file in `webapps` folder of the server                  
+OR
+- generate a WAR file of the application and deploy it in the tomcat server by placing the previously generated WAR file in `webapps` folder of the tomcat server                  
 - Register a Retailer and a Customer
 - Login as Admin, enter Username and Password as `admin@gmail.com` and `admin` respectively and approve/reject registered retailer

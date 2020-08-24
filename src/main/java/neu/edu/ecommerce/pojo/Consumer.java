@@ -12,10 +12,11 @@ import java.util.List;
  *
  * @author aelinadas
  */
-public class Retailer {
+public class Consumer {
     private int id;
-    private String name;
-    private String primaryContactName;
+    private String fname;
+    private String lname;
+    private int age;
     private String phoneNumber;
     private String email;
     private String password;
@@ -26,7 +27,7 @@ public class Retailer {
     private String country;
     private String zipCode;
     private byte status;
-    private List<Product> productList = new ArrayList<>(0);
+    private List<OrderedProduct> orderList = new ArrayList<>(0);
 
     public int getId() {
         return id;
@@ -36,20 +37,20 @@ public class Retailer {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getFname() {
+        return fname;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFname(String fname) {
+        this.fname = fname;
     }
 
-    public String getPrimaryContactName() {
-        return primaryContactName;
+    public String getLname() {
+        return lname;
     }
 
-    public void setPrimaryContactName(String primaryContactName) {
-        this.primaryContactName = primaryContactName;
+    public void setLname(String lname) {
+        this.lname = lname;
     }
 
     public String getPhoneNumber() {
@@ -132,13 +133,19 @@ public class Retailer {
         this.status = status;
     }
 
-    public List<Product> getProductList() {
-        return productList;
+    public int getAge() {
+        return age;
     }
 
-    public void setProductList(List<Product> productList) {
-        this.productList = productList;
+    public void setAge(int age) {
+        this.age = age;
     }
-    
-    
+
+    public List<OrderedProduct> getOrderList() {
+        return orderList;
+    }
+
+    public void setOrderList(List<OrderedProduct> orderList) {
+        this.orderList = orderList;
+    }  
 }

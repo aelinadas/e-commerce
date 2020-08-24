@@ -19,11 +19,25 @@
     <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
         <property name="mappings">
             <props>
-                <prop key="index.htm">retailerController</prop>
-                <prop key="register.htm">retailerController</prop>
-                <prop key="login.htm">retailerController</prop>
+                <prop key="index.htm">homeController</prop>
+                <prop key="home.htm">homeController</prop>
+                <prop key="retailer.htm">retailerController</prop>
+                <prop key="consumer.htm">consumerController</prop>
+                <prop key="login.htm">loginController</prop>
+                <prop key="admin.htm">adminController</prop>
+                <prop key="product.htm">productController</prop>
+                <prop key="search.htm">searchController</prop>
+                <prop key="order.htm">orderController</prop>
+                <prop key="download.htm">downloadController</prop>
             </props>
         </property>
+    </bean>
+    
+    <bean class="org.springframework.web.servlet.view.XmlViewResolver">
+        <property name="location">
+            <value>/WEB-INF/order-pdf.xml</value>
+        </property>
+        <property name="order" value="0" />
     </bean>
 
     <bean id="viewResolver"
@@ -38,5 +52,12 @@
           p:viewName="index" />
     
     <bean name="retailerController" class="neu.edu.ecommerce.controller.RetailerController"/>
-
+    <bean name="consumerController" class="neu.edu.ecommerce.controller.ConsumerController"/>
+    <bean name="loginController" class="neu.edu.ecommerce.controller.LoginController"/>
+    <bean name="homeController" class="neu.edu.ecommerce.controller.HomeController"/>
+    <bean name="adminController" class="neu.edu.ecommerce.controller.AdminController"/>
+    <bean name="productController" class="neu.edu.ecommerce.controller.ProductController"/>
+    <bean name="searchController" class="neu.edu.ecommerce.controller.ProductSearchController"/>
+    <bean name="orderController" class="neu.edu.ecommerce.controller.OrderController"/>
+    <bean name="downloadController" class="neu.edu.ecommerce.controller.DownloadOrderController"/>
 </beans>

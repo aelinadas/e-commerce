@@ -1,6 +1,6 @@
 <%-- 
-    Document   : error
-    Created on : Mar 29, 2020, 2:40:59 PM
+    Document   : customer-success
+    Created on : Apr 19, 2020, 5:53:21 PM
     Author     : aelinadas
 --%>
 
@@ -27,10 +27,12 @@
             }
         </style>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Error Page</title>
+        <title>Success</title>
     </head>
     <body>
-        <h1 align="center">${message}</h1>
-        <a href="index.htm">Home</a>
+        <div class="header">
+            <h3 align="center">${message}</h3>
+            <a class="home" href="${pageContext.request.contextPath}/consumer.htm">Customer Home</a>
+        </div>
     </body>
 </html>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!--
 DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
 
@@ -39,20 +39,44 @@ made subject to such option by the copyright holder.
 
 Contributor(s):
 -->
-<hibernate-configuration>
-  <session-factory>
-    <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
-    <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/ecommercedb</property>
-    <property name="hibernate.connection.username">root</property>
-    <property name="hibernate.connection.password">Aelina12#</property>
-    <property name="hibernate.hbm2ddl.auto">update</property>
-    <property name="hibernate.show_sql">true</property>
-    <property name="hibernate.enable_lazy_load_no_trans">true</property>
-    <property name="show_sql">true</property>
-    <mapping resource="consumer.hbm.xml"/>
-    <mapping resource="retailer.hbm.xml"/>
-    <mapping resource="product.hbm.xml"/>
-    <mapping resource="orderedProduct.hbm.xml"/>
-  </session-factory>
-</hibernate-configuration>
+<hibernate-mapping>
+    <class name="neu.edu.ecommerce.pojo.OrderedProduct" table="orderedProducts">
+        <id name="orderedProductId" type="integer">
+            <column name="orderId"/>
+            <generator class="native"/>
+        </id>
+        <property name="storeProductId" type="integer">
+            <column name="storeProductId"/>
+        </property>
+        <property name="productName" type="string">
+            <column name="productName"/>
+        </property>
+        <property name="price" type="double">
+            <column name="price"/>
+        </property>
+        <property name="description" type="string">
+            <column name="description"/>
+        </property>
+        <property name="category" type="string">
+            <column name="category"/>
+        </property>
+        <property name="quantity" type="integer">
+            <column name="quantity"/>
+        </property>
+        <property name="retailerName" type="string">
+            <column name="reatailerName"/>
+        </property>
+        <property name="orderDateTime" type="timestamp">
+            <column name="orderDate"/>
+        </property>
+        <property name="orderNumber" type="string">
+            <column name="orderNumber"/>
+        </property>
+      
+        <many-to-one name="consumer" class="neu.edu.ecommerce.pojo.Consumer" fetch="select">
+            <column name="idConsumer" not-null="true" />
+        </many-to-one>
+      
+      
+    </class>
+</hibernate-mapping>

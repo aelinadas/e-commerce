@@ -1,6 +1,6 @@
 <%-- 
-    Document   : home
-    Created on : Mar 27, 2020, 9:12:24 PM
+    Document   : admin
+    Created on : Apr 3, 2020, 8:49:32 PM
     Author     : aelinadas
 --%>
 
@@ -17,7 +17,7 @@
                 text-transform: uppercase;
                 text-decoration: none;
                 background: #00b3b3;
-                padding: 10px 20px;
+                padding: 10px 0px;
                 border: none;
                 width: 200px;
             }
@@ -42,35 +42,28 @@
             }
         </style>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Home</title>
+        <title>Admin Home</title>
     </head>
     <body>
-        <h1 align="center">HOME</h1>
-        <h3 align="center">Welcome back Retailers and Customers</h3>
-        <form action="home.htm" method="post">
-            <input type="submit" value="Retailer Sign Up" name="signup" >
-            <input type="hidden" value="signup" name="action" />
+        <h1 align="center">Admin Home</h1>
+        <form action="admin.htm" method="POST">
+            <input type="submit" value="Approve/Reject Retailers" name="" >
+            <input type="hidden" value="approveORreject" name="action" />   
         </form>
         <br>
-        <form action="home.htm" method="post">
-            <input type="submit" value="Retailer Login" name="login" >
-            <input type="hidden" value="login" name="action" />
+        <form action="admin.htm" method="POST">
+            <input type="submit" value="View Orders" name="" >
+            <input type="hidden" value="viewOrders" name="action" />   
         </form>
         <br>
-        <form action="home.htm" method="post">
-            <input type="submit" value="Customer Sign Up" name="customersignup" >
-            <input type="hidden" value="customersignup" name="action" />
+        <form action="admin.htm" method="POST">
+            <input type="submit" value="Deactivate Accounts" name="" >
+            <input type="hidden" value="deactivate" name="action" />   
         </form>
         <br>
-        <form action="home.htm" method="post">
-            <input type="submit" value="Customer Login" name="customerlogin" >
-            <input type="hidden" value="customerlogin" name="action" />
+        <form action="home.htm" method="POST">
+            <input type="hidden" value="logout" name="action" /> 
+            <input type="submit" value="Logout" name="" >
         </form>
-        <br>
-        <form action="home.htm" method="post">
-            <input type="submit" value="Admin" name="admin" >
-            <input type="hidden" value="adminlogin" name="action" />
-        </form>
-        <br>
     </body>
 </html>

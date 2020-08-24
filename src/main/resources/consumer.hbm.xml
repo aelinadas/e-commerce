@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 <!--
 DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
 
@@ -39,20 +38,59 @@ made subject to such option by the copyright holder.
 
 Contributor(s):
 -->
-<hibernate-configuration>
-  <session-factory>
-    <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
-    <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/ecommercedb</property>
-    <property name="hibernate.connection.username">root</property>
-    <property name="hibernate.connection.password">Aelina12#</property>
-    <property name="hibernate.hbm2ddl.auto">update</property>
-    <property name="hibernate.show_sql">true</property>
-    <property name="hibernate.enable_lazy_load_no_trans">true</property>
-    <property name="show_sql">true</property>
-    <mapping resource="consumer.hbm.xml"/>
-    <mapping resource="retailer.hbm.xml"/>
-    <mapping resource="product.hbm.xml"/>
-    <mapping resource="orderedProduct.hbm.xml"/>
-  </session-factory>
-</hibernate-configuration>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="neu.edu.ecommerce.pojo.Consumer" table="consumer">
+        <id name="id" type="integer">
+            <column name="idConsumer"/>
+            <generator class="native"/>
+        </id>
+        
+        <list name = "orderList" table="order" cascade="all" lazy="false" inverse="true">
+            <key column = "idConsumer"/>
+            <list-index column = "indexPosition"/>
+            <one-to-many class="neu.edu.ecommerce.pojo.OrderedProduct"/>
+        </list>
+        
+        <property name="fname" type="string">
+            <column name="fName"/>
+        </property>
+        <property name="lname" type="string">
+            <column name="lName"/>
+        </property>
+        <property name="age" type="integer">
+            <column name="age"/>
+        </property>
+        <property name="email" type="string">
+            <column name="email"/>
+        </property>
+        <property name="password" type="string">
+            <column name="password"/>
+        </property>
+        <property name="phoneNumber" type="string">
+            <column name="phoneNumber"/>
+        </property>
+        <property name="street" type="string">
+            <column name="street"/>
+        </property>
+        <property name="city" type="string">
+            <column name="city"/>
+        </property>
+        <property name="state" type="string">
+            <column name="state"/>
+        </property>
+        <property name="country" type="string">
+            <column name="country"/>
+        </property>
+        <property name="zipCode" type="string">
+            <column name="zipCode"/>
+        </property> 
+        <property name="status" type="byte">
+            <column name="status"/>
+        </property>
+    </class>
+</hibernate-mapping>

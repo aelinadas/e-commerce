@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!--
 DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
 
@@ -38,52 +39,38 @@ made subject to such option by the copyright holder.
 
 Contributor(s):
 -->
-
-<!DOCTYPE hibernate-mapping PUBLIC
-  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-
 <hibernate-mapping>
-    <class dynamic-insert="false" dynamic-update="false" mutable="true" name="neu.edu.ecommerce.pojo.Retailer" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="retailer">
+    <class name="neu.edu.ecommerce.pojo.Product" table="product">
     <id name="id" type="integer">
-      <column name="idRetailer"/>
+      <column name="idProduct"/>
       <generator class="native"/>
     </id>
-    <property name="name" type="string">
+    <property name="productName" type="string">
       <column name="name"/>
     </property>
-    <property name="primaryContactName" type="string">
-      <column name="primaryContactName"/>
+    <property name="price" type="double">
+      <column name="price"/>
     </property>
-    <property name="phoneNumber" type="string">
-      <column name="phoneNumber"/>
+    <property name="description" type="string">
+      <column name="description"/>
     </property>
-    <property name="email" type="string">
-      <column name="email"/>
+    <property name="category" type="string">
+      <column name="category"/>
     </property>
-    <property name="street" type="string">
-      <column name="street"/>
+    <property name="quantity" type="integer">
+      <column name="quantity"/>
     </property>
-    <property name="city" type="string">
-      <column name="city"/>
+    <property name="retailerName" type="string">
+      <column name="retailer_name"/>
     </property>
-    <property name="state" type="string">
-      <column name="state"/>
+    <property name="numberOfProduct" type="integer">
+      <column name="number_of_products"/>
     </property>
-    <property name="country" type="string">
-      <column name="country"/>
+    <property name="numbberOfProductPerCustomer" type="integer">
+      <column name="no_of_prod_per_cust"/>
     </property>
-    <property name="zipCode" type="string">
-      <column name="zipCode"/>
-    </property>
-    <property name="password" type="string">
-      <column name="password"/>
-    </property>
-    <property name="confirmPassword" type="string">
-      <column name="confirmPassword"/>
-    </property>
-    <property name="status" type="byte">
-      <column name="status"/>
-    </property>
+    <many-to-one name="retailer" class="neu.edu.ecommerce.pojo.Retailer" fetch="select">
+            <column name="retailer_ID" not-null="true" />
+    </many-to-one>
     </class>
 </hibernate-mapping>

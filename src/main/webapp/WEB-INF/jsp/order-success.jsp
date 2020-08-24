@@ -1,6 +1,6 @@
 <%-- 
-    Document   : error
-    Created on : Mar 29, 2020, 2:40:59 PM
+    Document   : order-success
+    Created on : Apr 20, 2020, 4:18:31 AM
     Author     : aelinadas
 --%>
 
@@ -27,10 +27,12 @@
             }
         </style>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Error Page</title>
+        <title>Order Success</title>
     </head>
     <body>
-        <h1 align="center">${message}</h1>
-        <a href="index.htm">Home</a>
+        <div class="header">           
+            <h3 align="center">Thank you for shopping with us. Your total bill is \$ ${message}</h3>
+            <a class="home" href="${pageContext.request.contextPath}/consumer.htm">Customer Home</a>
+        </div>
     </body>
 </html>

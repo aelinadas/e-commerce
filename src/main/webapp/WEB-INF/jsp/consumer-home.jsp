@@ -1,6 +1,6 @@
 <%-- 
-    Document   : home
-    Created on : Mar 27, 2020, 9:12:24 PM
+    Document   : customer-home
+    Created on : Apr 15, 2020, 8:32:09 PM
     Author     : aelinadas
 --%>
 
@@ -42,35 +42,28 @@
             }
         </style>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Home</title>
+        <title>Customer Home</title>
     </head>
     <body>
-        <h1 align="center">HOME</h1>
-        <h3 align="center">Welcome back Retailers and Customers</h3>
-        <form action="home.htm" method="post">
-            <input type="submit" value="Retailer Sign Up" name="signup" >
-            <input type="hidden" value="signup" name="action" />
+        <h1 align="center">Welcome Customer</h1>
+        <form action="consumer.htm" method="post">
+            <input type="submit" value="Update Profile" name="updateprofile" >
+            <input type="hidden" value="updateprofile" name="action" />
+        </form>
+        <br>
+        <form action="consumer.htm" method="post">
+            <input type="submit" value="Order History" name="vieworder" >
+            <input type="hidden" value="vieworder" name="action" />
+        </form>
+        <br>
+        <form action="search.htm" method="post">
+            <input type="submit" value="View Products" name="placeorder" >
+            <input type="hidden" value="viewproducts" name="action" />
         </form>
         <br>
         <form action="home.htm" method="post">
-            <input type="submit" value="Retailer Login" name="login" >
-            <input type="hidden" value="login" name="action" />
+            <input type="hidden" value="logout" name="action" /> 
+            <input type="submit" value="Logout" name="" >
         </form>
-        <br>
-        <form action="home.htm" method="post">
-            <input type="submit" value="Customer Sign Up" name="customersignup" >
-            <input type="hidden" value="customersignup" name="action" />
-        </form>
-        <br>
-        <form action="home.htm" method="post">
-            <input type="submit" value="Customer Login" name="customerlogin" >
-            <input type="hidden" value="customerlogin" name="action" />
-        </form>
-        <br>
-        <form action="home.htm" method="post">
-            <input type="submit" value="Admin" name="admin" >
-            <input type="hidden" value="adminlogin" name="action" />
-        </form>
-        <br>
     </body>
 </html>

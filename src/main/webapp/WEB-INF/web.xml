@@ -4,6 +4,14 @@
         <param-name>contextConfigLocation</param-name>
         <param-value>/WEB-INF/applicationContext.xml</param-value>
     </context-param>
+    <filter>
+        <filter-name>InputValidation</filter-name>
+        <filter-class>neu.edu.ecommerce.filter.ValidateInjectionFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>InputValidation</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>

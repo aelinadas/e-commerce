@@ -6,8 +6,8 @@
 ## Languages, Tools and Servers used
 
 <img align="left" alt="java" width="50px" height="60px" src="https://github.com/aelinadas/aelinadas/blob/master/images/java.png" />
-<img align="left" alt="spring" width="50px" height="40px" src="https://github.com/aelinadas/blob/master/images/spring.png" />
-<img align="left" alt="mysql" width="60px" height="60px" src="https://github.com/aelinadas/blob/master/images/mysql.png" />
+<img align="left" alt="spring" width="50px" height="40px" src="https://github.com/aelinadas/aelinadas/blob/master/images/spring.png" />
+<img align="left" alt="mysql" width="60px" height="60px" src="https://github.com/aelinadas/aelinadas/blob/master/images/mysql.png" />
 <img align="left" alt="netbeans" width="50px" height="50px" src="https://github.com/aelinadas/aelinadas/blob/master/images/netbeans.png" />
 <img align="left" alt="tomcat" width="50px" height="50px" src="https://github.com/aelinadas/aelinadas/blob/master/images/tomcat.jpg" />
 <br />

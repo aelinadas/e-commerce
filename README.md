@@ -15,61 +15,55 @@
 
 ## Application Features
 
-2. Admin is given privilege to approve or reject the retailers based on the business they want to be into
+1. Admin is given privilege to approve or reject the retailers based on the business they want to be into
 
     <img alt="approve" src="https://github.com/aelinadas/e-commerce/blob/master/images/approve.png" />
 
     <img alt="disapprove" src="https://github.com/aelinadas/e-commerce/blob/master/images/disapprove.png" />
 
-3. Admin can view the details of the products sold so far
+2. Admin can view the details of the products sold so far
 
     <img alt="booking" src="https://github.com/aelinadas/e-commerce/blob/master/images/sold.png" />
 
-4. An activation mail is triggered to the Retailer upon account approval
+3. An activation mail is triggered to the Retailer upon account approval
 
     <img alt="mail" src="https://github.com/aelinadas/e-commerce/blob/master/images/emailapprove.png" />
 
-5. Airliner can add new aircrafts and manage their fleet of aircrafts
+4. Retailer can add products that he wants to sell and can manage the same
 
-    <img alt="fleet" src="https://github.com/aelinadas/e-commerce/blob/master/images/emailapprove.png" />
+    <img alt="addproduct" src="https://github.com/aelinadas/e-commerce/blob/master/images/addproduct.png" />
 
- 6. Airliner can add and manage flight schedules associated with an Aircraft
+    <img alt="manageproduct" src="https://github.com/aelinadas/e-commerce/blob/master/images/manageproduct.png" />
 
-    <img alt="flight" src="https://github.com/aelinadas/e-commerce/blob/master/images/flight.JPG" />
+5. Customers can search products that they want to purchase by selecting category from the dropdown or can directly browse with the product name
 
-7. Customer can search for flights and filter the results based on available filters
+    <img alt="browse" src="https://github.com/aelinadas/e-commerce/blob/master/images/browse.png" />
 
-    <img alt="search" src="https://github.com/aelinadas/e-commerce/blob/master/images/search.JPG" />
+    <img alt="result" src="https://github.com/aelinadas/e-commerce/blob/master/images/result.png" />
 
-8. A registered customer can make a reservation on the desired flight
+6. If based on search no product is found then view all products will show the list of products
 
-    <img alt="book" src="https://github.com/aelinadas/e-commerce/blob/master/images/book.JPG" />
+    <img alt="viewall" src="https://github.com/aelinadas/e-commerce/blob/master/images/viewall.png" />
 
-9. A reservation confirmation mail is recieved by the customer, upon booking a flight
+7. View all products will show all the products by all retailers and if the customer adds the product to cart, then it will be added to the cart
 
-    <img alt="customermail" src="https://github.com/aelinadas/e-commerce/blob/master/images/customermail.png" />
+    <img alt="cart" src="https://github.com/aelinadas/e-commerce/blob/master/images/cart.png" />
 
-10. A downloadable PDF of the ticket is generated that be accesed within the user account under `My Bookings`
+8. Upon Checkout, an order confirmation email will be triggered to the customer with the total amount charged
 
-    <img alt="myBooking" src="https://github.com/aelinadas/e-commerce/blob/master/images/mybooking.JPG" />
+    <img alt="orderconfirm" src="https://github.com/aelinadas/e-commerce/blob/master/images/orderconfirm.png" />
 
-    <img alt="ticket" src="https://github.com/aelinadas/e-commerce/blob/master/images/ticket.JPG" />
+9. A downloadable invoice of the order is generated that be accesed within the customer account under `Order History`
 
-11. Encrypted user passwords, leveraging BCryt, before storing user details
+    <img alt="order" src="https://github.com/aelinadas/e-commerce/blob/master/images/order.png" />
 
-    <img alt="encrypt" src="https://github.com/aelinadas/e-commerce/blob/master/images/encrypt.JPG" />
+    <img alt="invoice" src="https://github.com/aelinadas/e-commerce/blob/master/images/invoice.png" />
 
-### LANGUAGE, TOOLS and FRAMEWORK
+10. User passwords are encrypted, leveraging BCryt, before storing user details
 
-- Java
-- MySQL
-- Spring Framework
+    <img alt="encrypt" src="https://github.com/aelinadas/e-commerce/blob/master/images/encrypt.png" />
 
-### SERVER
-
-- Apache Tomcat
-
-### APPLICATION DEPLOYMENT
+## Application Deployment
 
 - Ensure that you have installed Java (Java 8 or above) on your machine
 - Clone or download this repository on to your machine
@@ -79,5 +73,5 @@
 - Integrate Tomcat with Netbeans and run the application
                     OR
   build and generate a WAR file of the application and deploy it in the tomcat server by placing the previously generated WAR file in `webapps` folder of the server                  
-- Register an Airliner and a Customer
-- Login as Administrator, enter Username and Password as `admin@travel.com` and `admin1` respectively and approve previously registered airliner account 
+- Register a Retailer and a Customer
+- Login as Admin, enter Username and Password as `admin@gmail.com` and `admin` respectively and approve/reject registered retailer
